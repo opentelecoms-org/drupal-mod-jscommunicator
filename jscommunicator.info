@@ -1,0 +1,7 @@
+name = JSCommunicator
+description = SIP Phone for WebRTC
+package = JSCommunicator
+core = 7.x
+dependencies[] = libraries (>=2.x)
+dependencies[] = jssip
+

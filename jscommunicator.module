@@ -1,0 +1,48 @@
+<?php
+
+/**
+ * hook_libraries_info() implementation for the jscommunicator library module
+ *
+ * JSCommunicator is a JavaScript communication tool (voice, webcam and chat)
+ * using Session Initiation Protocol (SIP) from RFC 3261, a popular
+ * protocol for Internet-based voice, video, chat, desktop sharing and
+ * other real-time protocols.
+ *
+ * Please download the JSCommunicator JavaScript source file to the directory
+ *
+ *   $(DRUPAL_HOME)/libraries/jscommunicator/JSComm.js
+ *
+ * and manually create a VERSION file corresponding to the version
+ * in use, for example:
+ *
+ *   echo 1.0.0 > $(DRUPAL_HOME)/libraries/jscommunicator/VERSION
+ *
+ * The JSCommunicator module is currently known to be used by version 7.x-2.x
+ * of the DruCall module - see http://drucall.org for source code
+ * and a live demonstration.
+ *
+ * @return
+ *  An associative array whose keys are internal names of libraries
+ *  and whose values are describing each library.
+ */
+function jscommunicator_libraries_info() {
+  $libraries['jscommunicator'] = array(
+    'name' => 'JSCommunicator',
+    'vendor url' => 'http://jscommunicator.org',
+    'download url' => 'http://jscommunicator.org/download/',
+    'version arguments' => array(
+      'file' => 'VERSION',
+      'pattern' => '@([0-9\.]+)@',
+      'lines' => 1,
+      'cols' => 8,
+    ),
+    'files' => array(
+          'js' => array(
+            'JSComm.js',
+      ),
+    ),
+  );
+  return $libraries;
+}
+
+
