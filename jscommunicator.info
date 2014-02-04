@@ -4,4 +4,5 @@ package = JSCommunicator
 core = 7.x
 dependencies[] = libraries (>=2.x)
 dependencies[] = jssip
+dependencies[] = arbiterjs
 
