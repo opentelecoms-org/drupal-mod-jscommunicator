@@ -5,4 +5,6 @@ core = 7.x
 dependencies[] = libraries (>=2.x)
 dependencies[] = jssip
 dependencies[] = arbiterjs
+dependencies[] = jqueryi18nproperties
+dependencies[] = fontawesome
 
